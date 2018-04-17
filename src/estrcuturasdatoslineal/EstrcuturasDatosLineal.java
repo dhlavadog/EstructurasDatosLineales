@@ -25,23 +25,6 @@ public class EstrcuturasDatosLineal
    {
        //Listas 
     
-       List lista1 = new List();
-       
-       lista1.printList();
-       lista1.insertAtBegin(new Node(3));
-       lista1.printList();
-       System.out.println("\n");
-       lista1.insertAtBegin(new Node(15));
-       lista1.printList();
-       System.out.println("\n");
-       lista1.insertAtIndex(new Node(5),2);
-       lista1.printList();
-       System.out.println("\n");
-       lista1.insertAtEnd(new Node(13));
-       lista1.printList();
-       System.out.println("\n");
-       lista1.deleteAtIndex(2);
-       lista1.printList();
        
      /*  BufferedReader br = new BufferedReader( new InputStreamReader(System.in)); 
        List Unsorted = new List();
