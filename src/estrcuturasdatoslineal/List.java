@@ -161,20 +161,20 @@ public class List
         else return null;
     }
     
-    public Node binarySearch(int value, int dw, int up) //(valor a buscar,limite inferior, limite sueperior
+    public Node binarySearch(int value, int dw, int up) //(valor a buscar,limite inferior, limite superior)
     {
-        int midPoint = (dw + up)/2;
-        Node temp = this.get(midPoint);
+        int midPoint = (dw + up)/2; //se saca la mitad del tamaño del arreglo
+        Node temp = this.get(midPoint); // se busca el nodo que este en la posicion de la mitad
         
-        if(dw == up)
+        if(dw == up) // si los extremos son iguales y el valor del nodo es igual al buscado entonces se devuelve el nodo
         {
             if(temp.value == value) return temp;
             else return null;
         }
-        else
+        else // en caso contrario..
         {
-            if(value > temp.value) return binarySearch(value, midPoint+1, up);
-            else
+            if(value > temp.value) return binarySearch(value, midPoint+1, up); //Si el valor buscado es mayor al valor del nodo de la mitad
+            else                                                               //se cambia el limite inferior por el de la mitad+1 
             {
                 if(value < temp.value) return binarySearch(value, dw, midPoint - 1);
                 else return temp;
